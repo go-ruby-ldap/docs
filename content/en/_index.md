@@ -1,4 +1,9 @@
-# go-ruby-ldap
+---
+title: "Home"
+weight: 10
+---
+
+# go-ruby-ldap {#go-ruby-ldap}
 
 **A pure-Go (CGO=0), MRI-faithful reimplementation of the Ruby
 [`net-ldap`](https://github.com/ruby-ldap/ruby-net-ldap) gem's `Net::LDAP`
@@ -11,13 +16,13 @@ It does **not** reimplement the LDAP protocol; it wraps the official client and
 presents the `net-ldap` API, so a static, CGO=0 binary talks to a real directory
 (OpenLDAP, Active Directory, 389 Directory Server, …).
 
-## Install
+## Install {#install}
 
 ```sh
 go get github.com/go-ruby-ldap/ldap
 ```
 
-## Quick start
+## Quick start {#quick-start}
 
 ```go
 c, err := ldap.New(ldap.Config{
@@ -46,7 +51,7 @@ for _, e := range res.Entries {
 }
 ```
 
-## In rbgo
+## In rbgo {#in-rbgo}
 
 The same surface is available inside [rbgo](https://github.com/go-embedded-ruby/ruby)
 as the `Net::LDAP` class:

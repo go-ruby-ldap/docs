@@ -1,4 +1,9 @@
-# Why pure Go
+---
+title: "Why pure Go"
+weight: 20
+---
+
+# Why pure Go {#why-pure-go}
 
 `go-ruby-ldap` is **CGO=0**: it links no C libraries and shells out to no
 external `ldapsearch` binary. LDAP protocol work is delegated to the official
@@ -14,7 +19,7 @@ this module adds the `net-ldap` ergonomics and result/error model on top.
 - **Standalone & reusable.** No Ruby runtime dependency; the dependency runs the
   other way — `rbgo` binds *this* module.
 
-## Transport is a host seam
+## Transport is a host seam {#transport-is-a-host-seam}
 
 A `Client` drives an injected transport whose method set is satisfied directly by
 `*ldap.Conn` (no adapter). Every method's request-building and response-mapping
