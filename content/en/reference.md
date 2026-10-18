@@ -1,6 +1,11 @@
-# Reference
+---
+title: "Reference"
+weight: 30
+---
 
-## Connection
+# Reference {#reference}
+
+## Connection {#connection}
 
 | net-ldap gem                              | go-ruby-ldap/ldap                                    |
 | ----------------------------------------- | ---------------------------------------------------- |
@@ -13,13 +18,13 @@
 | `ldap.rename(olddn:, newrdn:)`            | `c.Rename(olddn, newrdn, true, "")`                  |
 | `ldap.get_operation_result`               | `c.OperationResult()`                                |
 
-## Search scopes
+## Search scopes {#search-scopes}
 
 - `ldap.ScopeBase` — the base object only (`Net::LDAP::SearchScope_BaseObject`)
 - `ldap.ScopeSingleLevel` — the base's immediate children
 - `ldap.ScopeSubtree` — the base and its whole subtree (the net-ldap default)
 
-## Filters (`Net::LDAP::Filter`)
+## Filters (`Net::LDAP::Filter`) {#filters-netldapfilter}
 
 | net-ldap                                  | go-ruby-ldap                        |
 | ----------------------------------------- | ----------------------------------- |
@@ -32,17 +37,17 @@
 
 Assertion values are escaped per RFC 4515.
 
-## Entry (`Net::LDAP::Entry`)
+## Entry (`Net::LDAP::Entry`) {#entry-netldapentry}
 
 Attribute access is case-insensitive: `Entry.DN()`, `Entry.Get(attr) []string`,
 `Entry.First(attr) string`, `Entry.AttributeNames()`.
 
-## Modify operations
+## Modify operations {#modify-operations}
 
 `ldap.ModAdd`, `ldap.ModReplace`, `ldap.ModDelete` — mirroring net-ldap's
 `:add` / `:replace` / `:delete` operation symbols.
 
-## Errors
+## Errors {#errors}
 
 `ldap.Error` carries the LDAP result code and a net-ldap-style `Name`
 (`NoSuchObject`, `InvalidCredentials`, `EntryAlreadyExists`, …), plus synthetic

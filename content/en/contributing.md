@@ -1,8 +1,13 @@
-# Contributing
+---
+title: "Contributing"
+weight: 40
+---
+
+# Contributing {#contributing}
 
 `go-ruby-ldap/ldap` is BSD-3-Clause and welcomes contributions.
 
-## Building & testing
+## Building & testing {#building-testing}
 
 ```sh
 GOWORK=off go build ./...
